@@ -13,12 +13,12 @@ export const PokemonModalProvider = ({ children }) => {
         currentPokemon: modal.pokemon,
         openModal: (pokemon) => setModal({ isOpen: true, pokemon }),
         isModalOpen: modal.isOpen,
-        closeModal: () => setModal((prev) => ({ ...prev, isOpen: false })),
+        closeModal: () => setModal((prev => ({ ...prev, isOpen: false }))),
     };
 
     return (
-        <PokemonModalContext.Provider value={value}>
-            {children}
+        <PokemonModalContext.Provider value={ value }>
+            { children }
         </PokemonModalContext.Provider>
     );
 };
